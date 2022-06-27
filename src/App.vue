@@ -1,29 +1,82 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header>
+    <div class="brand">
+      <img src="@/assets/logo.svg" alt="Flame play logo" />
+    </div>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/commands">Commands</router-link>
+      <BtnPrimary btnAction="Convidar Bot" />
+    </nav>
+  </header>
+
+  <router-view />
 </template>
 
+<script>
+import "@/style/reset.css";
+import "@/style/normalize.css";
+import "@/style/animations.css";
+import "boxicons";
+import BtnPrimary from "@/components/Buttons/BtnPrimary.vue";
+
+export default {
+  name: "App",
+  components: {
+    BtnPrimary,
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  //colors
+  --c-orange: #f26b1d;
+  --c-orange-light: #fc6e1d;
+
+  --c-white: #ffffff;
+  --c-black-transparent: #26262633;
+  --c-blue: #2f6073;
+  --c-gray: #f2f2f2;
+  --c-black: #262626;
+  //font
+  --f-brand: "Orbitron", sans-serif;
+  --fweight-l: 500;
+  --fweight-m: 600;
+  --fweight-b: 700;
+  --fsize-sm: 1em;
+  --fsize-lg: 3.375em;
 }
 
-nav {
-  padding: 30px;
+body {
+  background-color: var(--c-gray);
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  max-width: 1440px;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 6em;
+  nav {
+    display: flex;
+    align-items: center;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    a {
+      margin: 0 1.5em;
+      color: var(--c-black);
+      font-weight: var(--fweight-l);
+      padding: 0.5em;
+      transition: 0.5s ease;
+      border-radius: 0.5em;
+      &:hover {
+        background-color: var(--c-black-transparent);
+        transition: 0.5s ease;
+      }
     }
   }
 }

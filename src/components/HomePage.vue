@@ -1,16 +1,18 @@
 <template>
   <HeroMain />
   <DetailsMain />
+  <AboutMain/>
 </template>
 
 <script>
-import HeroMain from "@/components/Hero/HeroMain.vue";
-import DetailsMain from "./Hero/DetailsMain.vue";
+import HeroMain from "@/components/Home/HeroMain.vue";
+import DetailsMain from "./Home/DetailsMain.vue";
+import AboutMain from "./Home/AboutMain.vue";
 export default {
   name: "HomePage",
   props: {
     msg: String,
   },
-  components: { DetailsMain, HeroMain },
+  components: { AboutMain, DetailsMain, HeroMain },
 };
 </script>

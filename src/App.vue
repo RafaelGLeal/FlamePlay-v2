@@ -5,7 +5,6 @@
     </div>
     <nav>
       <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
       <router-link to="/commands">Commands</router-link>
       <BtnPrimary btnAction="Convidar Bot" />
     </nav>
@@ -46,10 +45,12 @@ export default {
   --fweight-m: 600;
   --fweight-b: 700;
   --fsize-sm: 1em;
-  --fsize-lg: 3.375em;
+  --fsize-md: 1.5em;
+  --fsize-lg: 2.5em;
 }
 
 body {
+  box-sizing: border-box;
   background-color: var(--c-gray);
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
@@ -61,7 +62,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3em 6em;
+  padding: 2em 4em;
   nav {
     display: flex;
     align-items: center;

@@ -1,9 +1,6 @@
 <template>
   <div class="hero">
     <div class="hero-col-1">
-      <div class="dot-image">
-        <img src="@/assets/dotGrid.svg" alt="Dot grid image" />
-      </div>
       <div class="hero-col-1__wrapper">
         <h2>O melhor bot multiuso do mundo ao seu alcance.</h2>
         <div class="btn-wrapper">
@@ -47,13 +44,11 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .dot-image {
-      position: absolute;
-      top: 25%;
-      left: 0;
-    }
     h2 {
-      margin-bottom: 2em;
+      margin-right: 4em;
+      margin-bottom:1em;
+      font-size: var(--fsize-lg);
+      line-height: 1.2em;
     }
     .btn-wrapper {
       display: flex;
@@ -65,21 +60,18 @@ export default {
     &__bg {
       position: relative;
       z-index: 1;
-      margin-top: 3em;
+      margin-top: 5em;
       img {
         max-width: 90%;
       }
       &::before {
         content: "";
-        background-color: var(--c-blue);
         position: absolute;
         width: 70%;
         height: 100%;
         z-index: -1;
         right: 0;
         top: 5%;
-        border-top-left-radius: 5em;
-        border-bottom-left-radius: 5em;
       }
       .bg-noteIcon-1,
       .bg-noteIcon-2 {
